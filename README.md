@@ -1,5 +1,5 @@
 # Coding Standard
-Improve Your Coding Standard Through following the guidlines.
+Improve Your Coding Standard Through the following guidlines.
 1. We run our hooks on every commit to automatically point out issues in code such as missing semicolons, trailing whitespace, and debug statements.
    * pip install pre-commit
 #
