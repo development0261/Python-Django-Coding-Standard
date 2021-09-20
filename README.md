@@ -46,3 +46,138 @@ Improve Your Coding Standard Through the following guidlines.
     * Facilitates easy maintenance and modification of existing code
     * Since the class is sharable, the code can be reused
     * Since the class is sharable, the code can be reused and many other such Advantages.
+
+# The Code layout:
+  * Imports, Blank Lines, and the Indentations:
+    The import should be in a particular sequence. At first, the standard libraries, then the third party, and at the last, the local libraries should be imported. If you only     need a single function/class from the import, do an absolute import. It makes your code much cleaner, accurate, and easy to identify. Don’t forget to add a space between     different types of imports.
+
+  * There should be two blank lines surrounding classes and top-level functions. The methods inside of the class should be surrounded by a single blank line only. The preferred method of indentation is spaces, the 4 spaces indentation is accepted and accurate, but still, most people prefer tab indentation. Please keep in mind not to mix both spaces and tabs for indentation.
+         
+
+      * Don't forget to add a space between different group of imports
+
+      * first of all, the standard library imports
+       ```
+        import standard_library_import_a
+        import standard_library_import_b
+        
+       ```
+        
+      * then,the third party imports
+        ```
+        import third_party_import_a
+        import third_party_import_b
+        import third_party_import_c
+        ```
+      * at the last, local library import
+
+        ```
+        from local_library import local_a, local_b
+        from local_library_two import local_c
+        ```
+
+      * two blank lines for top level functions
+
+        ```
+        def top_level_function(argument):
+        ```
+      * A standard four space indent
+        ```
+        print(argument)
+        ```
+   * Whitespaces, Trailing Commas, and String Quotes
+      * One should avoid extra white spaces, there must be a single white space around both sides of an operator, one after the comma and none inside opening or closing of       parenthesis. Both single quotes and double quotes are acceptable in python, you should use both if you need quotes inside quotes to avoid syntax error and extra backslash.
+        * Examples of commas and whitespaces
+          ```
+              x,  y = 30,  "text inside quotes"
+              z = 'text inside quotes'
+              if x == 30: print(x, y, z)
+          ```
+        * how to use quotes inside quotes
+        ```
+              text = "This text is using 'the single quote' inside double quote"
+              print(text)
+        ```
+   * Naming Conventions
+      * Use grammatically correct variable names, the class name should start with an uppercase and must follow camelCase convention If more than two words are to be used. In the same way, a function name should be joined with an underscore, and it must be lowercase. In method arguments, always use self as the first argument to declare an instance variable. In the same way, use ‘cls’ for the first argument for the class method. If the function name clashes with a reserved argument, use an underscore instead of a wrong spelling. Constants are declared in all capital letters.
+          * class name follows camelcase convention
+          ```
+            class StudentDetails:
+
+            def __init__(self, first_name, last_name):
+            self.first_name = first_name
+            self.last_name = last_name
+          ```
+          * Method name, variable names in lowercase joined with an underscore
+          ```
+            def grade(self, marks_obtained):
+          ```
+          * constants in capital
+          ```
+            GRACE = 2
+            marks_obtained = GRACE + marks_obtained
+            if marks_obtained > 90:
+            self.student_grade = 'A'
+            elif marks_obtained > 70:
+            student_grade = 'B'
+            else:
+            student_grade = 'C'
+          ```
+
+   * Exception Handling for every critical situation
+        ```
+            try:
+            file = open('filename.txt')
+            file.write('Hello World')
+
+            except Exception as e:
+            print('Cannot open the file :', e)
+
+            finally:
+            file.close()
+        ```
+   
+   * Use DRY (Don’t Repeat Yourself):
+      * Always use the DRY principle to reuse the code. The best way to do it is to use functions and classes. The common functions can be put into a separate utils.py file and can be used several times instead of creating similar functions again and again.
+Suppose if you need to read three files, instead of writing code for file read thrice, you can read it as a function and save your time.
+          * function to read the file read
+          ```
+          def file_read(filename):
+          with open(filename, 'r') as f:
+          return f.read()
+
+          qualities = file_read('quality.txt')
+          description = file_read('description.txt')
+          summary = file_read('summary.txt')
+          ```
+   * What to use? Tuples, Lists of Dictionaries
+      * Use tuples when data is non-changeable, dictionaries when you need to map things, and lists if your data can change later on.
+        
+          * tuples are used when data is constant
+            ```
+            colors_of_rainbow = ('V', 'I', 'B', 'G', 'Y', 'O', 'R')
+            ```
+          * lists where data can be mutated
+             ```
+            movies_to_watch  = ['Inception', 'Iron Man', 'Wonder Woman']
+            ```
+          * Using lists in mapping is wrong
+          * O(n) time would be taken to extract marks
+            ```
+            marks_obtained = [['History', 30], ['English', 35], ['Physics', 45]]
+            ```
+          * dicts when mapping is needed
+          * dicts take O(1) time to get key value
+            ```
+            marks_obtained = {'History': 30, 'English': 35, 'Physics': 45}
+            ```
+
+   * Use the ‘with’ statement while opening a file, the ‘with’ statement closes the file even if there is an exception raised
+      ```
+        import csv
+        with open('filename.csv', 'r') as file:
+        csv_reader = csv.reader(file)
+        for line in csv_reader:
+        print(line)
+      ```
+  
