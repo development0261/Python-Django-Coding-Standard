@@ -39,3 +39,10 @@ Improve Your Coding Standard Through following the guidlines.
       * Global variable names: First of all, you should avoid using global variables, but if you need to use them, prevention of global variables from getting exported can be done via __all__, or by defining them with a prefixed underscore (the old, conventional way).
       * Function names and method argument: Names of functions should be in lowercase and separated by an underscore and self as the first argument to instantiate methods. For classes or methods, use CLS or the objects for initialization.
       * Method names and instance variables: Use the function naming rules—lowercase with words separated by underscores as necessary to improve readability. Use one leading underscore only for non-public methods and instance variables.
+
+# Why Choose Object Oriented Programming in Python?
+1. Python was designed with OOP approach and it offers the following advantages:
+    * Provides a clear program structure and a clean code
+    * Facilitates easy maintenance and modification of existing code
+    * Since the class is sharable, the code can be reused
+    * Since the class is sharable, the code can be reused and many other such Advantages.
