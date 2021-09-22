@@ -117,21 +117,21 @@ Improve Your Coding Standard Through the following guidlines.
             GRACE = 2
             marks_obtained = GRACE + marks_obtained
             if marks_obtained > 90:
-            self.student_grade = 'A'
+              self.student_grade = 'A'
             elif marks_obtained > 70:
-            student_grade = 'B'
+              student_grade = 'B'
             else:
-            student_grade = 'C'
+              student_grade = 'C'
           ```
 
    * Exception Handling for every critical situation
         ```
             try:
-            file = open('filename.txt')
-            file.write('Hello World')
+              file = open('filename.txt')
+              file.write('Hello World')
 
             except Exception as e:
-            print('Cannot open the file :', e)
+              print('Cannot open the file :', e)
 
             finally:
             file.close()
@@ -143,12 +143,12 @@ Suppose if you need to read three files, instead of writing code for file read t
           * function to read the file read
           ```
           def file_read(filename):
-          with open(filename, 'r') as f:
-          return f.read()
+            with open(filename, 'r') as f:
+            return f.read()
 
-          qualities = file_read('quality.txt')
-          description = file_read('description.txt')
-          summary = file_read('summary.txt')
+            qualities = file_read('quality.txt')
+            description = file_read('description.txt')
+            summary = file_read('summary.txt')
           ```
    * What to use? Tuples, Lists of Dictionaries
       * Use tuples when data is non-changeable, dictionaries when you need to map things, and lists if your data can change later on.
