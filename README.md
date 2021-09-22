@@ -105,8 +105,8 @@ Improve Your Coding Standard Through the following guidlines.
             class StudentDetails:
 
             def __init__(self, first_name, last_name):
-            self.first_name = first_name
-            self.last_name = last_name
+              self.first_name = first_name
+              self.last_name = last_name
           ```
           * Method name, variable names in lowercase joined with an underscore
           ```
