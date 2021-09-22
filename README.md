@@ -12,7 +12,7 @@ Improve Your Coding Standard Through the following guidlines.
   def some_function_name(
        var_first, var_second, var_third,
        var_fourth):
-   print(var_first)
+    print(var_first)
    ```
 #
 
