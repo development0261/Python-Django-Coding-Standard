@@ -60,11 +60,10 @@ Improve Your Coding Standard Through the following guidlines.
       * Don't forget to add a space between different group of imports
 
       * first of all, the standard library imports
-       ```
-        import standard_library_import_a
-        import standard_library_import_b
-        
-       ```
+        ```
+         import standard_library_import_a
+         import standard_library_import_b
+        ```
         
       * then,the third party imports
         ```
