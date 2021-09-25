@@ -1,7 +1,7 @@
 # Coding Standard
 Improve Your Coding Standard Through the following guidlines.
 1. We run our hooks on every commit to automatically point out issues in code such as missing semicolons, trailing whitespace, and debug statements.
-   * pip install pre-commit
+   * ```pip install pre-commit```
 #
 
 2. Use single quotes for strings, or a double quote if the string contains a single quote. Don’t waste time doing unrelated refactoring of existing code to conform to this style.
@@ -46,6 +46,9 @@ Improve Your Coding Standard Through the following guidlines.
     * Facilitates easy maintenance and modification of existing code
     * Since the class is sharable, the code can be reused
     * Since the class is sharable, the code can be reused and many other such Advantages.
+2. Always implement Class based Script for better integration to other functions.
+    * Using Class will make our whole module importable to other scripts
+    * This will help when using Bigger projects as importing each and every function won't make sense
 
 # The Code layout:
   * Imports, Blank Lines, and the Indentations:
