@@ -183,3 +183,5 @@ Suppose if you need to read three files, instead of writing code for file read t
         print(line)
       ```
   
+  > If you think we are missing something or something is incorrect, Create a PR with the required edits and we will merge it after reviewing
+  
